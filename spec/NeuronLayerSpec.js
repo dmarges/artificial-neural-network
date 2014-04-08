@@ -1,6 +1,7 @@
 describe("Creating a Neuron Layer", function() {
 	beforeEach(function() {
-		var neurons = [new Neuron(), new Neuron(), new Neuron(), new Neuron(), new Neuron()];
+		var neurons = [new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), 
+			new Neuron(5, [0, 0, 0, 0, 0])];
 		this.neuronLayer = new NeuronLayer(neurons);
 	});
 
@@ -9,11 +10,11 @@ describe("Creating a Neuron Layer", function() {
 	});
 
 	it("should accept an array of neurons and also track the number of neurons present", function() {
-		expect(this.neuronLayer.numOfNeurons).toEqual(5);
+		expect(this.neuronLayer.numberOfNeurons).toEqual(5);
 	});
 
 	it("should track the number of inputs per neuron", function() {
-		expect(this.neuronLayer.numOfInputsPerNeuron).toEqual(5);
+		expect(this.neuronLayer.numberOfInputsPerNeuron).toEqual(5);
 	});
 
 	it("should hold neurons passed into it", function() {

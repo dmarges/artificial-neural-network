@@ -1,6 +1,6 @@
 describe("Creating a Neuron", function() {
 	beforeEach(function() {
-		this.neuron = new Neuron();
+		this.neuron = new Neuron(5, [0, 0, 0, 0, 0]);
 	});
 
 	it("should create a neuron", function() {
@@ -8,7 +8,7 @@ describe("Creating a Neuron", function() {
 	});
 
 	it("should create a neuron with 5 inputs and weight of 0 for each if no params are provided", function() {
-		expect(this.neuron.numOfInputs).toEqual(5);
+		expect(this.neuron.numberOfInputs).toEqual(5);
 
 		for(var i = 0; i < this.neuron.weights.length; i++) {
 			expect(this.neuron.weights[i]).toEqual(0);
@@ -18,7 +18,7 @@ describe("Creating a Neuron", function() {
 	it("should create a neuron with the inputs and weights provided by params", function() {
 		this.neuron = new Neuron(10, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
 
-		expect(this.neuron.numOfInputs).toEqual(10);
+		expect(this.neuron.numberOfInputs).toEqual(10);
 
 		for(var i = 0; i < this.neuron.weights.length; i++) {
 			expect(this.neuron.weights[i]).toEqual(1);
