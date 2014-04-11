@@ -1,7 +1,6 @@
 describe("Creating a Neural Network", function() {
 	beforeEach(function() {
-		var neurons = [new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), 
-			new Neuron(5, [0, 0, 0, 0, 0])],
+		var neurons = [new Neuron(5), new Neuron(5), new Neuron(5), new Neuron(5), new Neuron(5)],
 			neuralLayer = [new NeuronLayer(neurons)];
 		this.neuralNet = new NeuralNetwork(neuralLayer, 2);
 	});
@@ -22,7 +21,7 @@ describe("Creating a Neural Network", function() {
 
 describe("Updating a Neural Network", function() {
 	beforeEach(function() {
-		this.neurons = [new Neuron(5, [1, 0, 0, 0, 1]), new Neuron(5, [1, 1, 1, 1, 1]), new Neuron(5, [1, 0, 1, 1, 0]), new Neuron(5, [1, 1, 1, 1, 0]), new Neuron(5, [0, 1, 1, 1, 0])],
+		this.neurons = [new Neuron(5), new Neuron(5), new Neuron(5), new Neuron(5), new Neuron(5)],
 		this.neuralLayer = [new NeuronLayer(this.neurons)];
 		this.neuralNet = new NeuralNetwork(this.neuralLayer, 2);
 	});
