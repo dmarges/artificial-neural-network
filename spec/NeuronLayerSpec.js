@@ -1,7 +1,7 @@
 describe("Creating a Neuron Layer", function() {
 	beforeEach(function() {
-		var neurons = [new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), new Neuron(5, [0, 0, 0, 0, 0]), 
-			new Neuron(5, [0, 0, 0, 0, 0])];
+		var neurons = [new Neuron(5), new Neuron(5), new Neuron(5), new Neuron(5), 
+			new Neuron(5)];
 		this.neuronLayer = new NeuronLayer(neurons);
 	});
 

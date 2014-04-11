@@ -47,12 +47,10 @@ NeuralNetwork.prototype = {
 		var outputs = [],
 			weight = 0;
 
-
 		/** 
 		 * This series of nested loops is responsible for looping through each neural layer, then each neuron within each neural layer, and 
 		 * then finally looping through each weight of each neuron. This is necessary to generate activation values for outputs.
 		 */
-
 
 		/** For each layer. */
 		for(var i = 0; i < this.numberOfLayers; i++) {
@@ -67,7 +65,10 @@ NeuralNetwork.prototype = {
 
 				/** For each weight in the neuron. */
 				for(var k = 0; k < this.layers[i].neurons[j].numberOfInputs; k++) {
-					netInputs += this.layers[i].neurons[j].weights[k];
+					var numberOfInputs = this.layers[i].neurons[j].numberOfInputs,
+						currentNeuron = this.layers[i].neurons[j];
+
+					netInputs += currentNeuron.weights[k] * currentNeuron.weights[numberOfInputs - 1];
 				}
 
 				outputs.push(this.sigmoid(netInputs, this.activationResponse));
