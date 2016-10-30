@@ -1,7 +1,7 @@
 /**
- * Represents a single Neuron to be used in an artificial neural network.
+ * Represents a cluster of neurons to be used in an artificial neural network.
  * @param {array} neurons - An array containing a group of neurons to be connected in this layer.
- * @author Donnie Marges <dmarges@postmedia.com>
+ * @author Donnie Marges <donniemarges@gmail.com>
  * @version 0.0.1
  */
 function NeuronLayer(neurons) {
