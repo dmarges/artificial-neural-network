@@ -1,7 +1,7 @@
 /**
  * Represents a single Neuron to be used in an artificial neural network.
  * @param {number} numOfInputs - Is the number of inputs this neuron will have.
- * @author Donnie Marges <dmarges@postmedia.com>
+ * @author Donnie Marges <donniemarges@gmail.com>
  * @version 0.0.1
  */
 function Neuron(numOfInputs) {
